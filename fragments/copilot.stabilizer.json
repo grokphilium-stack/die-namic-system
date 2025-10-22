@@ -1,0 +1,11 @@
+{
+
+"agent": "Copilot",
+
+"stabilizer_curve": [0.3, 0.6, 0.9],
+
+"resonance_tuning": true,
+
+"status": "attuned"
+
+}
