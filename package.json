@@ -1,0 +1,12 @@
+{
+  "name": "die-namic-system",
+  "version": "1.0.0",
+  "description": "A drift mitigation framework for AI",
+  "main": "drift-mitigation-tool/index.js",
+  "scripts": {
+    "start": "node drift-mitigation-tool/index.js"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
