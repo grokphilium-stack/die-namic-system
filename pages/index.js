@@ -1,25 +1,32 @@
+import Image from 'next/image'
+
 export default function Home() {
   return (
-    <div 
-      className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-emerald-900 relative"
-      style={{
-        backgroundImage: "url('/background.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundBlendMode: "overlay"
-      }}
-    >
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-emerald-900 relative">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/background.png"
+          alt="Paper with apple and pencil"
+          layout="fill"
+          objectFit="cover"
+          className="opacity-20"
+        />
+      </div>
+
       {/* Logo */}
       <div className="absolute top-6 left-6 z-10">
-        <img 
-          src="/copilot_image_1761021770655.jpeg" 
+        <Image
+          src="/copilot_image_1761021770655.jpeg"
           alt="Die-Namic Systems Logo"
-          className="h-16 w-16 rounded-lg shadow-lg"
+          width={80}
+          height={80}
+          className="rounded-lg"
         />
       </div>
 
       {/* HERO SECTION */}
-      <div className="container mx-auto px-6 py-24 text-center relative z-20">
+      <div className="container mx-auto px-6 py-24 text-center relative z-10">
         <div className="wave-container mb-12">
           <div className="drift-wave"></div>
           <div className="stabilization-glow"></div>
@@ -48,7 +55,7 @@ export default function Home() {
       </div>
 
       {/* SECTION 2: THE PROBLEM */}
-      <section className="py-24 bg-black/20 relative z-20">
+      <section className="py-24 bg-black/20 relative z-10">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -84,5 +91,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  );
+  )
 }
