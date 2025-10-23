@@ -1,3 +1,5 @@
 export default function Home() {
-  return <h1>Hello World!</h1>;
-}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-emerald-900">
+      {/* HERO */}
+      <div className="container
