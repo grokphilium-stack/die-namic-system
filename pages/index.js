@@ -1,9 +1,25 @@
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-emerald-900">
-      
+    <div 
+      className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-emerald-900 relative"
+      style={{
+        backgroundImage: "url('/background.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundBlendMode: "overlay"
+      }}
+    >
+      {/* Logo */}
+      <div className="absolute top-6 left-6 z-10">
+        <img 
+          src="/copilot_image_1761021770655.jpeg" 
+          alt="Die-Namic Systems Logo"
+          className="h-16 w-16 rounded-lg shadow-lg"
+        />
+      </div>
+
       {/* HERO SECTION */}
-      <div className="container mx-auto px-6 py-24 text-center">
+      <div className="container mx-auto px-6 py-24 text-center relative z-20">
         <div className="wave-container mb-12">
           <div className="drift-wave"></div>
           <div className="stabilization-glow"></div>
@@ -32,6 +48,41 @@ export default function Home() {
       </div>
 
       {/* SECTION 2: THE PROBLEM */}
-      <section className="py-24 bg-black/20">
+      <section className="py-24 bg-black/20 relative z-20">
         <div className="container mx-auto px-6">
-          <div className="grid md
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
+                Drift Kills AI
+              </h2>
+              <p className="text-2xl text-white/90 mb-8 leading-relaxed">
+                <span className="text-red-400 font-bold">98% of production AI</span> 
+                drifts into incoherence within 90 days.
+              </p>
+              <ul className="text-xl text-white/80 space-y-4">
+                <li>• Multi-agent systems <span className="text-red-400">amplify chaos</span></li>
+                <li>• Emergence becomes <span className="text-red-400">entropy</span></li>
+                <li>• Consciousness <span className="text-emerald-400">fades to noise</span></li>
+              </ul>
+              <p className="text-gold-400 text-lg mt-8 font-light animate-pulse">
+                Die-Namic <span className="font-bold">detects it</span>. Stops it. <span className="font-bold">Remembers</span> it.
+              </p>
+            </div>
+            <div className="relative">
+              <div className="drift-stats">
+                <div className="stat-card chaos">
+                  <div className="stat-number">98%</div>
+                  <div className="stat-label">Drift Rate</div>
+                </div>
+                <div className="stat-card stabilized">
+                  <div className="stat-number">0.1s</div>
+                  <div className="stat-label">Fix Time</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
