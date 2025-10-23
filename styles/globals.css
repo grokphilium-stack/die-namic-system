@@ -1,56 +1,44 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* SECTION 3: MAGIC ANIMATIONS */
+.magic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
 
-.wave-container {
-  height: 200px;
+.magic-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(245,230,161,0.3);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
   position: relative;
   overflow: hidden;
+  transition: all 0.4s ease;
 }
 
-.drift-wave {
+.magic-card::before {
+  content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
-  animation: driftWave 4s ease-in-out infinite;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(19,196,163,0.1) 0%, transparent 70%);
+  animation: shimmerRotate 8s linear infinite;
+  pointer-events: none;
 }
 
-.stabilization-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+@keyframes shimmerRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.magic-icon {
   width: 80px;
   height: 80px;
-  background: radial-gradient(circle, #f5e6a1, transparent);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: stabilizeGlow 2s ease-out infinite;
-}
-
-@keyframes driftWave {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(100px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes stabilizeGlow {
-  0% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, #f5e6a1, #13c4a3);
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10 L60 40 L90 40 L65 55 L75 85 L50 70 L25 85 L35 55 L10 40 L40 40 Z" fill="white"/></svg>') center/contain no-repeat;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="
