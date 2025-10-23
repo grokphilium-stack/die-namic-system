@@ -1,3 +1,13 @@
+{/* Logo */}
+<div className="flex justify-center mb-8">
+  <img 
+    src="/copilot_image_1761021770655.jpeg" 
+    alt="Die-Namic Systems Logo"
+    className="h-20 w-auto rounded-lg shadow-2xl"
+  />
+</div>
+
+
 import Image from 'next/image'
 
 export default function Home() {
