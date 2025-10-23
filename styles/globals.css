@@ -1,44 +1,16 @@
-/* SECTION 3: MAGIC ANIMATIONS */
-.magic-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 4rem;
+/* Add this to your globals.css */
+.min-h-screen {
+  background-image: url('/background.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
 }
 
-.magic-card {
-  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(245,230,161,0.3);
-  border-radius: 1.5rem;
-  padding: 2.5rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease;
+/* Keep all the existing gradient and other styles */
+.bg-gradient-to-br {
+  background: linear-gradient(135deg, 
+    rgba(99, 102, 241, 0.9) 0%,
+    rgba(168, 85, 247, 0.8) 50%,
+    rgba(16, 185, 129, 0.7) 100%),
+    url('/background.png') center/cover;
 }
-
-.magic-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(19,196,163,0.1) 0%, transparent 70%);
-  animation: shimmerRotate 8s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes shimmerRotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.magic-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.5rem;
-  background: linear-gradient(135deg, #f5e6a1, #13c4a3);
-  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10 L60 40 L90 40 L65 55 L75 85 L50 70 L25 85 L35 55 L10 40 L40 40 Z" fill="white"/></svg>') center/contain no-repeat;
-  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="
