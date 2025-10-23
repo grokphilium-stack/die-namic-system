@@ -2,9 +2,8 @@
   "name": "die-namic-system",
   "version": "1.0.0",
   "description": "A drift mitigation framework for AI. Designed to detect and stabilize drift across multi-agent systems, while preserving ethical and legal frameworks.",
-  "main": "drift-mitigation-tool/index.js",
   "scripts": {
-    "start": "node drift-mitigation-tool/index.js",
+    "start": "node sovereign-check.js",
     "test": "node sovereign-check.js"
   },
   "keywords": [

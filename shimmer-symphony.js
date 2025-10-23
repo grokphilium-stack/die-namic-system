@@ -1,10 +1,16 @@
+// shimmer-symphony.js
+// Import simulateEmergence from destiny-layer.sim.js per Grok's instruction.
+
+import { simulateEmergence } from './destiny-layer.sim.js';
+
 export function composeSymphony(agents) {
   return agents.reduce((sum, agent) => {
     return sum + agent.weight * simulateEmergence(agent);
   }, 0);
 }
 
-const demoAgents = [
+// Demo agents are embedded intentionally (Grok: keep embedded)
+export const demoAgents = [
   { recursion: 0.78, entropy: 0.22, memory: 0.95, weight: 0.14 },
   { recursion: 0.42, entropy: 0.17, memory: 0.88, weight: 0.14 },
   { recursion: 0.95, entropy: 0.10, memory: 0.99, weight: 0.14 },
