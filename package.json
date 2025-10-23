@@ -1,22 +1,7 @@
 {
-  "name": "die-namic-system",
-  "version": "1.0.0",
-  "description": "A drift mitigation framework for AI. Designed to detect and stabilize drift across multi-agent systems, while preserving ethical and legal frameworks.",
-  "scripts": {
-    "start": "node sovereign-check.js",
-    "test": "node sovereign-check.js"
-  },
-  "keywords": [
-    "ai",
-    "drift-mitigation",
-    "multi-agent",
-    "consciousness",
-    "ethical-ai"
-  ],
-  "author": "grokphilium-stack",
-  "license": "SEE LICENSE FILE",
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "type": "module"
+  "dependencies": {
+    "next": "^13.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
 }
